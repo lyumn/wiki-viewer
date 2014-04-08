@@ -1,4 +1,7 @@
 WikiViewer::Application.routes.draw do
+  root  'wiki_viewer#home'
+  get	'search' => 'wiki_viewer#search'
+  get	'source/:q' => 'wiki_viewer#source', :constraints => {:q => /.*/}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
