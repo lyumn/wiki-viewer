@@ -3,18 +3,12 @@ $(document).on('ready page:load', function (){ // http://stackoverflow.com/quest
 	readCookie();
   
   $("#white").click(function(){
-  $.cookie('theme', '#FFFFFF', { path: '/' });
-    $("body").css({"background-color":"#FFFFFF"});
+	setTheme("white");
   });
   
-  $("#green").click(function(){
-	setTheme("green");
+  $("#apple").click(function(){
+	setTheme("apple");
     
-  });
-  
-  $("#brown").click(function(){
-  $.cookie('theme', 'brown', { path: '/' });
-    $("body").css({"background-color":"brown"});
   });
   
    $("#night").click(function(){
@@ -44,17 +38,21 @@ function setTheme(opt){
 
 switch(opt)
 {
-case "green":
+case "apple":
   $.cookie('theme', '#C7EDCC', { path: '/' });
-  $.cookie('fontcolor', '#333333', { path: '/' });
+  $.cookie('fontcolor', '#555555', { path: '/' });
    readCookie();
   break;
 case "night":
   $.cookie('theme', '#333333', { path: '/' });
-   $.cookie('fontcolor', '#EEEEEE', { path: '/' });
+   $.cookie('fontcolor', '#BBBBBB', { path: '/' });
    readCookie();
-  break;
- 
+  break; 
+case "white":
+  $.cookie('theme', '#FFFFFF', { path: '/' });
+  $.cookie('fontcolor', '#333333', { path: '/' });
+   readCookie();
+  break; 
 }
 
 }
@@ -68,4 +66,5 @@ function readCookie(){
   $("tbody").css({"background-color":theme});
   $("#source").css({'font-size':fontsize});
   $("#source").css({'color':fontcolor}); 
+  $("h1").css({'color':fontcolor}); 
 }

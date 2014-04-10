@@ -10,11 +10,29 @@ h1 {
 	margin: 30px;
 }
 
+.dropdown-menu { min-width: 50px; }
+
+.dropdown-menu li{ 
+margin-left: 5px;
+margin-right: 5px;
+ }
+
+.font-menu button { width: 30px; }
+
+.theme-menu button { width: 60px; }
+
+/* input field */
 #q{
-margin-top:9px;
+	margin-top:9px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+#source {
+	max-width:1024px;
+	float: none;
+	margin: 0 auto;
+}
+
+h1 {
 	text-align: center;
 }
 
@@ -37,4 +55,10 @@ label {
 
 #source p{
 	padding-top: 20px;
+}
+
+#toc {
+display: table;
+border: 1px solid #AAAAAA;
+padding: 7px;
 }

@@ -1,14 +1,14 @@
 <div class="container-fluid">
 <div class="row-fluid">
  <div class="span3"></div>
-  <div class="span6" >
+  <div class="span6" id="source">
 	<%= form_tag("search", method: "get") do %>
 	  <%= label_tag(:q, "http://") %>
 	  <%= text_field_tag(:q) %>
-	  <%= submit_tag "Search", class: "btn btn-mid btn-primary" %>
+	  <%= submit_tag "Go", class: "btn btn-mid btn-primary" %>
 	<% end %>
 	<p> To view wiki pages in eye-friendly color themes, <br>
-	please input a Wikisource/Wikibook/Wikipedia url to start! <br>
+	please input a Wikisource/Wikibooks/Wikipedia url to start! <br>
 	(e.g. en.wikisource.org/wiki/Anna_Karenina)</p>
 	
   </div>
