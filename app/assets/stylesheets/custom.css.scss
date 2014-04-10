@@ -3,7 +3,19 @@
 body{
 	padding-top: 30px;
 	padding-bottom: 100px;
-	background-color:#C7EDCC
+	background-color:#FFFFFF
+}
+
+h1 {
+	margin: 30px;
+}
+
+#q{
+margin-top:9px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
 }
 
 label {
@@ -13,4 +25,16 @@ label {
 .navbar-default {
     background-color: #F8F8F8;
     border-color: #E7E7E7;
+}
+
+#source p{
+	line-height: 130%;
+}
+
+#source li{
+	line-height: 120%;
+}
+
+#source p{
+	padding-top: 20px;
 }
