@@ -13,6 +13,11 @@ class WikiViewerController < ApplicationController
 	s = Nokogiri::HTML(html.read)
 	s.encoding = 'UTF-8'
 	@src = s.to_s
+	@src.gsub!(/<!DOCTYPE(...)*>/,'')
+	@src.gsub!('<html>','')
+	@src.gsub!('</html>','')
+	@src.gsub!('<body>','')
+	@src.gsub!('</body>','')
 	path = root_path+'/source/'
 	@src.gsub!('//'+params[:lang]+"."+params[:wiki]+".org/wiki/", '/source/'+params[:lang]+"/"+params[:wiki]+"/org/wiki/")	
   end
