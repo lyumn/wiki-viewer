@@ -7,7 +7,7 @@ class WikiViewerController < ApplicationController
   def source
 
 	@src = "hello"
-	link = "http://"+params[:lang]+"."+params[:wiki]+"."+params[:title]+"?action=render"	
+	link = "https://"+params[:lang]+"."+params[:wiki]+"."+params[:title]+"?action=render"	
 	html = open(link)
 	puts html
 	s = Nokogiri::HTML(html.read)
