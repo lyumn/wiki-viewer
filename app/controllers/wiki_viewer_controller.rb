@@ -33,8 +33,5 @@ class WikiViewerController < ApplicationController
 	#@search = (Nokogiri::HTML(open(link))).to_s
 	#@search.gsub!('//en.wikisource.org/wiki/', '/source/')
   end
-    
-  def user
-  end
   
 end
