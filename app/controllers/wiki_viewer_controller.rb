@@ -7,7 +7,7 @@ class WikiViewerController < ApplicationController
   def source
 
 	@src = "hello"
-	link = "http://"+params[:lang]+"."+params[:wiki]+"."+params[:title]+"?action=render"	
+	link = "https://"+params[:lang]+"."+params[:wiki]+"."+params[:title]+"?action=render"	
 	html = open(link)
 	puts html
 	s = Nokogiri::HTML(html.read)
@@ -32,9 +32,6 @@ class WikiViewerController < ApplicationController
 	#link = "https://en.wikisource.org/w/index.php?search="+params[:q]
 	#@search = (Nokogiri::HTML(open(link))).to_s
 	#@search.gsub!('//en.wikisource.org/wiki/', '/source/')
-  end
-    
-  def user
   end
   
 end
